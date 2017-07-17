@@ -53,12 +53,17 @@
 		<img src="{T_THEME_PATH}/images/whosonline.png" style="padding-right: 5px; float: left" alt="{L_WHO_IS_ONLINE}" />
 		<p>
 			<!-- EVENT index_body_block_online_prepend -->
-			{TOTAL_USERS_ONLINE} ({L_ONLINE_EXPLAIN})<br />{RECORD_USERS}<br /> <br />{LOGGED_IN_USER_LIST}
-			<!-- IF LEGEND --><br /><em>{L_LEGEND}{L_COLON} {LEGEND}</em><!-- ENDIF -->
+			<i class="fa fa-sign-in"></i> {TOTAL_USERS_ONLINE} ({L_ONLINE_EXPLAIN})<br /><i class="fa fa-tachometer"></i> {RECORD_USERS}<br /> 
+			<!-- IF U_VIEWONLINE -->
+				<br /><i class="fa fa-group"></i> {LOGGED_IN_USER_LIST}
+				<!-- IF LEGEND --><br /><em><i class="fa fa-star"></i> {L_LEGEND}{L_COLON} {LEGEND}</em><!-- ENDIF -->
+			<!-- ENDIF -->
 			<!-- EVENT index_body_block_online_append -->
 		</p>
 	</div>
 <!-- ENDIF -->
+
+<!-- EVENT index_body_birthday_block_before -->
 
 <!-- IF S_DISPLAY_BIRTHDAY_LIST -->
 	<div class="stat-block birthday-list">
@@ -66,7 +71,7 @@
 		<img src="{T_THEME_PATH}/images/birthday.png" style="padding-right: 5px; float: left" alt="{L_BIRTHDAYS}" />
 		<p>
 			<!-- EVENT index_body_block_birthday_prepend -->
-			<!-- IF .birthdays -->{L_CONGRATULATIONS}{L_COLON} <strong><!-- BEGIN birthdays -->{birthdays.USERNAME}<!-- IF birthdays.AGE !== '' --> ({birthdays.AGE})<!-- ENDIF --><!-- IF not birthdays.S_LAST_ROW -->, <!-- ENDIF --><!-- END birthdays --></strong><!-- ELSE -->{L_NO_BIRTHDAYS}<!-- ENDIF -->
+			<i class="fa fa-birthday-cake"></i> <!-- IF .birthdays -->{L_CONGRATULATIONS}{L_COLON} <strong><!-- BEGIN birthdays -->{birthdays.USERNAME}<!-- IF birthdays.AGE !== '' --> ({birthdays.AGE})<!-- ENDIF --><!-- IF not birthdays.S_LAST_ROW -->, <!-- ENDIF --><!-- END birthdays --></strong><!-- ELSE -->{L_NO_BIRTHDAYS}<!-- ENDIF -->
 			<!-- EVENT index_body_block_birthday_append -->
 		</p>
 	</div>
@@ -78,7 +83,7 @@
 		<img src="{T_THEME_PATH}/images/stats.png" style="padding-right: 5px; float: left" alt="{L_STATISTICS}" />
 		<p>
 			<!-- EVENT index_body_block_stats_prepend -->
-			{TOTAL_POSTS} &bull; {TOTAL_TOPICS} &bull; {TOTAL_USERS} &bull; {NEWEST_USER}
+			<i class="fa fa-bar-chart"></i> {TOTAL_POSTS} &bull; {TOTAL_TOPICS} &bull; {TOTAL_USERS} &bull; {NEWEST_USER}
 			<!-- EVENT index_body_block_stats_append -->
 		</p>
 	</div>

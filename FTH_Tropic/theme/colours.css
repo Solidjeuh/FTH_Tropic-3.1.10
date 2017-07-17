@@ -54,6 +54,8 @@ hr {
 .headerbar {
 	background-color: #CFBD9E;
 	background-image: url("./images/bg_header.jpg");
+    background-repeat: repeat-x;
+	position:relative;
 	color: #401A07;
 	font-weight: bold;
 }
@@ -756,7 +758,7 @@ Colours and backgrounds for cp.css
 
 .panel-container .panel li.row {
 	border-bottom-color: #B5C1CB;
-	border-top-color: #F9F9F9;
+	border-top-color: #DECEBA;
 }
 
 ul.cplist {
@@ -825,7 +827,7 @@ ul.cplist {
 
 #minitabs .activetab > a,
 #minitabs .activetab > a:hover {
-	background-color: #F9F9F9;
+	background-color: #DECEBA;
 	color: #333333;
 }
 
@@ -873,7 +875,7 @@ ul.cplist {
 }
 
 #navigation #active-subsection a {
-	background: #F9F9F9;
+	background: #DECEBA;
 	color: #D31141;
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
@@ -896,7 +898,7 @@ ul.cplist {
 }
 
 .panel-container .panel {
-	background-color: #F9F9F9;
+	background-color: #DECEBA;
 }
 
 #cp-main .pm {
@@ -1115,7 +1117,7 @@ input.disabled {
 }
 
 .dropdown-extended ul li:hover {
-	background-color: #CFE1F6;
+	background-color: #c4ac86;
 	color: #401A07;
 }
 
@@ -1144,11 +1146,11 @@ input.disabled {
 }
 
 .dropdown .pointer-inner {
-	border-color: #FFF transparent;
+	border-color: #368907 transparent;
 }
 
 .dropdown-extended .pointer-inner {
-	border-color: #F1F8FF transparent;
+	border-color: #e7fec2 transparent;
 }
 
 ul.linklist li.responsive-menu a.responsive-menu-link:before {
@@ -1160,8 +1162,11 @@ ul.linklist li.responsive-menu a.responsive-menu-link:hover:before, ul.linklist 
 }
 
 .dropdown .dropdown-contents {
-	background: #fff;
-	border-color: #b9b9b9;
+	background-color: #e7fec2; /* Old browsers */ /* FF3.6+ */
+	background-image: -webkit-linear-gradient(top, #e7fec2 0%, #CADCEB 100%);
+	background-image: linear-gradient(to bottom, #e7fec2 0%,#CADCEB 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7fec2', endColorstr='#CADCEB',GradientType=0 ); /* IE6-9 */
+	border-color: #B9B9B9;
 	box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -1187,6 +1192,12 @@ ul.linklist li.responsive-menu a.responsive-menu-link:hover:before, ul.linklist 
 li.notification-reported strong, li.notification-disapproved strong {
 	color: #D31141;
 }
+
+.badge {
+	background-color: #D31141;
+	color: #ffffff;
+}
+
 /* Adding Forum and Topic Icons */
 div.legend {
 	padding-top: 20px;

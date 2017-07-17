@@ -139,14 +139,24 @@ p.right {
 }
 
 p.jumpbox-return {
-	margin-top: 1em;
+	margin-top: 10px;
+	margin-bottom: 0;
+	float: left;
 }
 
 b, strong {
 	font-weight: bold;
 }
 
+.text-strong {
+	font-weight: bold;
+}
+
 i, em {
+	font-style: italic;
+}
+
+.text-italics {
 	font-style: italic;
 }
 
@@ -220,13 +230,11 @@ ol ol ul, ol ul ul, ul ol ul, ul ul ul {
 	float: left;
 	width: 65%;	
     color: white;
-    text-shadow: 4px 4px 6px #000000;	
 }
 
 #site-description h1 {
     margin-top: 100px;
 	color: white;
-    text-shadow: 4px 4px 6px #000000;
 }	
 
 /* Round cornered boxes and backgrounds
@@ -1258,6 +1266,26 @@ ul.linklist:after,
 	margin-left: 58px;
 }
 
+.badge {
+	border-radius: 10px;
+	opacity: 0.8;
+	text-align: center;
+	white-space: nowrap;
+	font-size: 10px;
+	line-height: 1;
+	float: right;
+	display: inline-block;
+	margin-left: 3px;
+	vertical-align: baseline;
+	position: relative;
+	top: 3px;
+	padding: 4px 6px;
+}
+
+.badge.hidden {
+	display: none;
+}
+
 /* Navbar specific list items
 ----------------------------------------*/
 
@@ -1286,10 +1314,6 @@ ul.linklist:after,
 
 .compact .icon-notification > a > span, .compact .icon-pm > a > span {
 	display: none;
-}
-
-.compact .icon-notification > a > strong, .compact .icon-pm > a > strong {
-	padding-left: 2px;
 }
 
 .dropdown-page-jump .dropdown {
@@ -1338,4 +1362,9 @@ a.gototop:hover {
 	background-position: 0 -30px;
 	border: none;
 	outline: none;
+}
+
+.count {
+	float: none;
+	font-weight: bold;
 }

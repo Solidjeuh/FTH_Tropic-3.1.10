@@ -48,6 +48,7 @@
 <link href="{T_STYLESHEET_LINK}" rel="stylesheet">
 <link href="{T_STYLESHEET_LANG_LINK}" rel="stylesheet">
 <link href="{T_THEME_PATH}/responsive.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet" media="all and (max-width: 700px)">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!-- IF S_CONTENT_DIRECTION eq 'rtl' -->
 	<link href="{T_THEME_PATH}/bidi.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
@@ -91,7 +92,7 @@
 			<div id="site-description">
 				<a id="logo" class="logo" href="<!-- IF U_SITE_HOME -->{U_SITE_HOME}<!-- ELSE -->{U_INDEX}<!-- ENDIF -->" title="<!-- IF U_SITE_HOME -->{L_SITE_HOME}<!-- ELSE -->{L_INDEX}<!-- ENDIF -->">{SITE_LOGO_IMG}</a>
 				<h1>{SITENAME}</h1>
-				<p>{SITE_DESCRIPTION}</p>
+				{SITE_DESCRIPTION}
 				<p class="skiplink"><a href="#start_here">{L_SKIP}</a></p>
 			</div>
 
@@ -108,6 +109,8 @@
 				</form>
 			</div>
 			<!-- ENDIF -->
+			
+			<!-- EVENT overall_header_searchbox_after -->			
 
 			</div>
 			<!-- EVENT overall_header_headerbar_after -->			
